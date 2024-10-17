@@ -8,10 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="icon" href="" type="image/x-icon">
-    <link rel="icon" sizes="96x96" href="" type="image/x-icon">
+    <link rel="icon" href="./images/logo_cloud77.png" type="image/x-icon">
+    <link rel="icon" sizes="96x96" href="./images/logo_cloud77.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "MjenkUIs7mceZxUZH",
+            });
+        })();
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-body-tertiary">
@@ -24,56 +35,516 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+            <ul class="navbar-nav nav nav-underline nav-tabs ms-auto mb-2 mb-lg-0" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false">Our Services</button>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-controls="projects" aria-selected="false">Projects</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#aboutUs" type="button" role="tab" aria-controls="aboutUs" aria-selected="false">About Us</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="contact-tab" data-bs-toggle="tab" data-bs-target="#rentPage" type="button" role="tab" aria-controls="rentPage" aria-selected="false">Rent Equipment</button>
               </li>
             </ul>
           </div>
         </div>
     </nav>
-    <div class="container-md-sm mainCont d-flex align-items-center justify-content-center">
-        <div id="textDiv" class="z-0 text-bs-dark p-3 d-flex column align-items-center justify-content-center">
-            <div>placeholder</div>
-            <div id="textHolder"></div>
+    <div class="container-md-sm mainCont tab-content" id="myTabContent">
+      <div class="tab-pane fade " id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div id="textDiv" class="z-0 text-bs-dark p-3">
+          <div class="container-md-sm w-50 smallText">Unleash Your</div>
+            <div id="textHolder" class="container-md-sm"></div>
+            <div class="container-md-sm w-50 smallText text-end">Explore Infinite Creativity with Us</div>
+            <div class="container-md-sm w-50 p-2 text-end ">
+              <span class="hoverEffectContact"><span class="p-4 contactUs">Contact us</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+              </svg></span>
+            </div>
+        </div>
+      </div>
+      <div class="container-md-sm services tab-pane fade" id="services" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="container-md-sm text-bs-yellow serviceTitle  p-2 text-center">Our service</div>
+        <div class="container-md-sm serviceSection p-3">
+          <div class="container-md-sm w-75 servicePara text-center p-3">
+            At Cloud7 Studio we specialize in creating tailored strategies to enhance your online presence and drive engagement. We offer a comprehensive range of services, including search engine optimization (SEO), social media management, and targeted advertising campaigns, all designed to increase brand visibility and attract new customers. With a focus on data-driven results, we work closely with clients to optimize their digital footprint and achieve measurable growth.
+          </div>
+          <div class="container-md-sm serviceGrid w-75 p-3">
+            <div class="data-grid">
+              <div class="container serviceObj">
+                <div class="title highlight">
+                  Motion Graphic Video
+                </div>
+                <div class="body">
+                  Motion graphic videos combine creative visuals and dynamic animations to effectively communicate messages and engage audiences. These videos are ideal for branding, storytelling, and enhancing presentations, making complex concepts more accessible and visually appealing.
+                </div>
+              </div>
+              <div class="container serviceObj">
+                <div class="title highlight">
+                  Media Marketing
+                </div>
+                <div class="body">
+                  Media marketing leverages various platforms, including social media and digital channels, to promote brands and connect with target audiences. By crafting strategic campaigns, it enhances brand visibility and drives customer engagement in a competitive landscape.
+                </div> 
+              </div>
+              <div class="container serviceObj">
+                <div class="title highlight">
+                  Re/Branding
+                </div>
+                <div class="body">
+                  Branding establishes a unique identity for a business, defining its values, voice, and visual elements to create a lasting impression. Rebranding involves refreshing or changing these elements to adapt to market trends, audience preferences, or shifts in business strategy, ensuring continued relevance and engagement.
+                </div>
+              </div>
+              <div class="container serviceObj">
+                <div class="title highlight">
+                  Video Production
+                </div>
+                <div class="body">
+                  Video production encompasses the entire process of creating video content, from conceptualization and scripting to filming and editing. It serves as a powerful medium for storytelling, marketing, and communication, effectively engaging audiences across various platforms.
+                </div>
+              </div>
+              <div class="container serviceObj">
+                <div class="title highlight ">
+                  Explainer Video
+                </div>
+                <div class="body">
+                  Explainer videos are concise, engaging animations or live-action clips designed to simplify complex concepts or products, making them easily understandable. They serve as effective marketing tools, capturing attention and conveying key messages in a memorable way.
+                </div>
+              </div>
+              <div class="container serviceObj">
+                <div class="title highlight">
+                  Paper-Copy
+                </div>
+                <div class="body">
+                  Paper copies are essential for marketing agencies, providing tangible materials such as brochures, flyers, and reports that effectively convey brand messages. They enhance presentations and promotional efforts, allowing clients to engage with information in a physical format.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-md-sm projects tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+        <div class="container-md-sm text-bs-purple project serviceTitle  p-2 text-center">Our Work</div>
+        <div class="containerCarasoul">
+          <!-- Project Cards Section -->
+          <div class="project-grid">
+              <div class="project-card" data-project="1">
+                  <video src="assets/videos/Bloom V3.mp4" muted autoplay loop></video>
+                  <div class="overlay">
+                      <h3>Bloom Launch Video ✨</h3>
+                  </div>
+              </div>
+              <div class="project-card" data-project="2">
+                  <video src="assets/videos/Hindi video.mp4" muted autoplay loop></video>
+                  <div class="overlay">
+                      <h3>Explainer Video (Bajaj Finserv)</h3>
+                  </div>
+              </div>
+            <div class="project-card" data-project="3">
+              <video src="assets/videos/MasterTouch Vivid Emulsion HD.mp4" muted autoplay loop></video>
+              <div class="overlay">
+                  <h3>MARKETING VIDEO</h3>
+              </div>
+            </div>
+            <div class="project-card" data-project="4">
+              <video src="assets/videos/Motion Bites -1.m4v" muted autoplay loop></video>
+              <div class="overlay">
+                  <h3>MARKETING VIDEO</h3>
+              </div>
+            </div>
+            <div class="project-card" data-project="5">
+              <video src="assets/videos/Organizing Workers through VAS v1.mp4" muted autoplay loop></video>
+              <div class="overlay">
+                  <h3>MARKETING VIDEO</h3>
+              </div>
+            </div>
+            <div class="project-card" data-project="6">
+            <img src="assets/images/BANNER AMAZON.png" alt="Project 2" class="project-image">
+              <div class="overlay">
+                  <h3>Amazon Banner</h3>
+              </div>
+            </div>
+            <div class="project-card" data-project="7">
+            <img src="assets/images/p 1 copy.jpg" alt="Project 2" class="project-image">
+              <div class="overlay">
+                  <h3>PetNosh Post</h3>
+              </div>
+            </div>
+            <div class="project-card" data-project="8">
+              <img src="assets/images/WOMENS DAY copy.jpg" alt="Project 2" class="project-image">
+                <div class="overlay">
+                    <h3>Womens Day Post</h3>
+                </div>
+            </div>
+            <div class="project-card" data-project="9">
+              <img src="assets/images/PETNOSH BRAND 1 copy.jpg" alt="Project 2" class="project-image">
+                <div class="overlay">
+                    <h3>PetNosh Post</h3>
+                </div>
+            </div>
+              <!-- Add more project cards as needed -->
+          </div>
+  
+          <!-- Modal for Expanded Section -->
+          <div class="modal" id="expandedSection">
+              <div class="modal-content1">
+                  <span class="close" id="closeModal">&times;</span>
+                  <div class="video-carousel">
+                      <button class="carousel-control prev" id="prevBtn">&#10094;</button>
+                      <div class="carousel-container">
+                          <video src="" id="carouselVideo" autoplay muted loop></video>
+                          <img src="" id="carouselImg"></img>
+                      </div>
+                      <button class="carousel-control next" id="nextBtn">&#10095;</button>
+                  </div>
+                  <div class="project-details" id="projectDetails">
+                      <h2>Project Name</h2>
+                      <p>Project description goes here.</p>
+                  </div>
+              </div>
+          </div>
+  
+      </div>
+      </div>
+      <div class="container-md-sm aboutUs tab-pane fade" id="aboutUs" role="tabpanel" aria-labelledby="aboutUs-tab">
+        <div class="container-md-sm text-bs-pink aboutUs serviceTitle  p-2 text-center">About Us</div>
+        <div class="container-md-sm aboutUsflex p-3">
+          <div class="container-md-sm w-75 text-center p-3">
+            We’d like to introduce you to some of the people<br>who make Cloud7 Studio what it is today.
+          </div>
+          <div class="container-md-sm w-75 aboutUsSection" >
+            <div class="container-md-sm aboutUsImg p-3 ">
+              <img src="assets/images/aboutus.jpg" alt="office coworkers" width="500px">
+            </div>
+            <div class="container-md-sm aboutUsPara p-3">
+              <p>We at Cloud 7 Studio, believe everyone has a story to tell, and so do brands. We help brands express their story by creating their content using our services like Animated Videos, Video Production, Short Films, Social Media Creatives, Product Videos and Marketing Ad Videos.</p>
+              <p>Cloud 7 Studio is where creativity meets innovation, offering tailored branding and design solutions that elevate your business.</p>
+              <p>At Cloud 7 Studio,we blend strategy with artistry to create powerful visual stories that resonate with your audience.</p>
+              <p>Specializing in cutting-edge design, Cloud 7 Studio helps brands stand out with unique, impactful creative content.</p>
+              <p>Whether it's branding, digital marketing, or graphic design, Cloud 7 Studio brings your vision to life with a creative edge.</p>
+              <p>Cloud 7 Studio is your go-to creative partner, delivering bespoke solutions that inspire, engage, and convert.</p>
+            </div>
+          </div>
+          <div class="container-md-sm peopleSection">
+            <strong>Meet Our Team</strong>
+            <p><strong><i>S.Shaikh</i></strong> - Creative Director</p>
+            <p><strong><i>Sammy.P</i></strong> - Design Director</p>
+            <p><strong><i>S.Pawaskar</i></strong> - Developer</p>
+            <p><strong><i>Altaf</i></strong> - Marketing Director </p>
+            <p><strong><i>Aarti</i></strong> - Client Service Manager </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-md-sm rentPage tab-pane fade show active" id="rentPage" role="tabpanel" aria-labelledby="rentPage-tab">
+        <div class="container-md-sm text-bs-teal serviceTitle  p-2 text-center">Rent Equipments</div>
+        <div class="container-md-sm p-3 equipmentsCardSection">
+          <div class="container-md-sm w-75 p-3 cardCont">
+            <div class="card" style="width: 350px">
+              <img src="images/sony_cam.jpg" class="card-img-top" alt="Sony Camera" width="200px" height="auto">
+              <div class="card-body">
+                <h5 class="card-title">Camera - Sony /Canon</h5>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">click for Price</a>
+              </div>
+            </div>
+            <div class="card" style="width: 350px">
+              <img src="images/green_screen.jpg" class="card-img-top" alt="Green Screen" width="200px" height="auto">
+              <div class="card-body">
+                <h5 class="card-title">Studio Green Screen</h5>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">click for Price</a>
+              </div>
+            </div>
+            <div class="card" style="width: 350px">
+              <img src="images/tripod.jpg" class="card-img-top" alt="Tripod" width="200px" height="auto">
+              <div class="card-body">
+                <h5 class="card-title">Tripod</h5>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">click for Price</a>
+              </div>
+            </div>
+            <div class="card" style="width: 350px">
+              <img src="images/COLLAR-MIC.png" class="card-img-top" alt="Collar Mic" width="200px" height="auto">
+              <div class="card-body">
+                <h5 class="card-title">Collar-Mic</h5>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">click for Price</a>
+              </div>
+            </div>
+            <div class="card" style="width: 350px">
+              <img src="images/Porta_Led.png" class="card-img-top" alt="Porta Led" width="200px" height="auto">
+              <div class="card-body">
+                <h5 class="card-title">Porta - Led</h5>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">click for Price</a>
+              </div>
+            </div>
+            <div class="card" style="width: 350px">
+              <img src="images/cannon-lens.jpg" class="card-img-top" alt="Canon Lens" width="200px" height="auto">
+              <div class="card-body">
+                <h5 class="card-title">Lens</h5>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">click for Price</a>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Get Quotation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="modalForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="tel" id="mobile" name="mobile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="date-label">From Date:</label>
+                        <input type="date" id="fromDate" name="fromDate" class="date-input" required>
+                        <label for="date" class="date-label">To Date:</label>
+                        <input type="date" id="toDate" name="toDate" class="date-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="equipment">Equipment Details:</label>
+                        <label>
+                            <input type="checkbox" class="equipment_selections" name="Camera" value="Camera"> Camera
+                        </label>
+                        <label>
+                            <input type="checkbox" class="equipment_selections" name="Tripod" value="Tripod"> Tripod
+                        </label>
+                        <label>
+                            <input type="checkbox" class="equipment_selections" name="Microphone" value="Microphone"> Microphone
+                        </label>
+                        <label>
+                            <input type="checkbox" class="equipment_selections" name="Lens" value="Lens"> Lens
+                        </label>
+                        <label>
+                            <input type="checkbox" class="equipment_selections" name="Porta Led Lights" value="Porta Led Lights"> Porta Led Lights
+                        </label>
+                        <label>
+                            <input type="checkbox" class="equipment_selections" name="Green Screen" value="Green Screen"> Green Screen
+                        </label>
+                    </div>
+                    <div class="form-group camera-models" id="camera-models">
+                        <label for="camera">Camera Details:</label>
+                        <select id="camera" name="camera">
+                            <option value="" disabled selected>Select Camera Model</option>
+                            <option value="Canon EOS 1300D">Canon EOS 1300D</option>
+                        </select>
+                    </div>
+                    <div class="form-group camera-models" id="tripod-models">
+                        <label for="tripod">Tripod Details:</label>
+                        <select id="tripod" name="tripod">
+                            <option value="" disabled selected>Select Tripod Model</option>
+                            <option value="Yunteng 880 VCT-880 Portable Aluminum Tripod">Yunteng 880 VCT-880 Portable Tripod</option>
+                        </select>
+                    </div>
+                    <div class="form-group lens-models" id="lens-models">
+                        <label for="equipment">Lens Details:</label>
+                        <label>
+                            <input type="checkbox" class="lensCheck" name="can-efs-18-55" value="Canon EFS 18-55mm"> Canon EFS 18-55mm
+                        </label>
+                        <label>
+                            <input type="checkbox" class="lensCheck" name="can-efs-75-30" value="Canon EFS 75-300mm"> Canon EFS 75-300mm
+                        </label> 
+                    </div>
+                    <div class="form-group mic-models" id="mic-models">
+                        <label for="mic">Microphone Details:</label>
+                        <select id="mic" name="mic">
+                            <option value="" disabled selected>Select Microphone</option>
+                            <option value="Rode Wireless Go">Rode Wireless Go</option>
+                            <option value="Sony ECM-W2BT Wireless Camera Microphone">Sony ECM-W2BT Wireless Camera Microphone</option>
+                            <option value="CrossBeats Clip Wireless Mic">CrossBeats Clip Wireless Mic</option>
+                            <option value="DJI Mic - Wireless Microphone">DJI Mic - Wireless Microphone</option>
+                        </select>
+                    </div>
+                    <div class="form-group camera-models" id="light-models">
+                        <label for="light">Porta Led Light Details:</label>
+                        <select id="light" name="light">
+                            <option value="" disabled selected>Select Porta Led Light Model</option>
+                            <option value="Halogen">Halogen</option>
+                            <option value="Led">Led</option>
+                        </select>
+                    </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModalbtn">Close</button>
+                <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Toast Message -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div id="liveToastSuccess" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <i class="bi bi-app-indicator"></i>
+              <strong class="me-auto">Alert</strong>
+              <small>Just Now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              The enquiry regarding the equipments was sent sucessfully.
+            </div>
+          </div>
+        </div>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+          <div id="liveToastError" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <i class="bi bi-exclamation-circle"></i>
+              <strong class="me-auto">Alert</strong>
+              <small>Just Now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              The enquiry regarding the equipments was not sent.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-md-sm footer"></div>
     </div>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
     <script>
-        const textDiv = document.getElementById('textDiv');
-        const textHolder = document.getElementById('textHolder');
-        const messages = [
-            { className: 'text-bs-blue', text: 'Imagination' },
-            { className: 'text-bs-purple', text: 'Creativeness' },
-            { className: 'text-bs-pink', text: 'Curiosity' },
-            { className: 'text-bs-teal', text: 'Vision' }
-        ];
-        
-        let index = 0;
+      function formatMessage(){
+            var uname = document.getElementById('name').value;
+            var uemail = document.getElementById('email').value;
+            var umob = document.getElementById('mobile').value;
+            var fromDate = document.getElementById('fromDate').value;
+            var toDate = document.getElementById('toDate').value;
+            var message = "I would like to request a quote for the below accessories from: "+fromDate+" - to: "+toDate+" you can contact me on "+umob;
+            var inputCheck = document.querySelectorAll('.equipment_selections');
+            inputCheck.forEach((input) => {
+                if (input.checked){
+                    if (input.checked){
+                        var val = input.value
+                        if (val === 'Camera'){
+                            message += "\n"
+                            var camera = document.getElementById('camera').value;
+                            message += "Camera: "+camera;                            
+                        }
+                        if (val === 'Microphone'){
+                            message += "\n"
+                            var mic = document.getElementById('mic').value;
+                            message += "Microphone: "+mic
+                        }
+                        if (val === 'Lens'){
+                            message += "\n"
+                            var lens = document.querySelectorAll('.lensCheck');
+                            var lensMsg = ""
+                            lens.forEach((lenss) =>{
+                                if(lenss.checked){
+                                    if (lensMsg === ""){
+                                        lensMsg = "Lens: "+lenss.value;
+                                    } else{
+                                        lensMsg += ", "+lenss.value;
+                                    }
+                                }
+                            })
+                            if (lensMsg !== ""){
+                                message += lensMsg;
+                            }
+                        }
+                        if (val === 'Tripod'){
+                            message += "\n"
+                            var Tripod = document.getElementById('tripod').value;
+                            message += "Tripod: "+Tripod;
+                        }
+                        if (val === 'Porta Led Lights'){
+                            message += "\n"
+                            var light = document.getElementById('light').value;
+                            message += "Porta Led Light: "+light
+                        }
+                        if (val === 'Green Screen'){
+                            message += "\n"
+                            message += "Green Screen"
+                        }
 
-        setInterval(() => {
-            // Start fade out
-            textDiv.classList.add('fade-out');
+                }}
+            })
+            console.log(message)
+            return {"name":uname,"email":uemail,"message":message}
+        }
+        const submitBtn = document.getElementById('submitBtn');
+        const closeModalBtn = document.getElementById('closeModalbtn');
 
-            // Wait for the fade-out transition to complete
-            setTimeout(() => {
-                // Change class and text
-                textDiv.className = 'z-0 '+messages[index].className + ' d-flex align-items-center justify-content-center p-3'; // Preserve padding
-                textHolder.textContent = messages[index].text;
+        // Function to add the spinner and text
+        function addSpinner() {
+            submitBtn.disabled = true;
+            submitBtn.textContent = '';
+            // Create spinner element
+            const spinner = document.createElement('span');
+            spinner.className = 'spinner-border spinner-border-sm';
+            spinner.setAttribute('aria-hidden', 'true');
 
-                // Start fade in
-                textDiv.classList.remove('fade-out');
+            // Create status message element
+            const statusText = document.createElement('span');
+            statusText.setAttribute('role', 'status');
+            statusText.textContent = ' Submitting...';
 
-                // Update index for the next message
-                index = (index + 1) % messages.length; // Loop back to the start
-            }, 500); // Match this with the fade-out duration
-        }, 3000); // Change every 3 seconds
+            // Append both elements to the button
+            submitBtn.appendChild(spinner);
+            submitBtn.appendChild(statusText);
+        }
+
+        // Function to remove the spinner and text
+        function removeSpinner() {
+            // Remove all child elements from the button
+            while (submitBtn.firstChild) {
+                submitBtn.removeChild(submitBtn.firstChild);
+            }
+            // Optionally, return the button to its original text
+            submitBtn.textContent = 'Submit';
+            submitBtn.disabled = false;
+        }
+        // Handle form submission (just an example)
+        const toastLiveSuccess = document.getElementById('liveToastSuccess');
+        const toastLiveError = document.getElementById('liveToastError');
+        document.getElementById('submitBtn').onclick = function (event) {
+            addSpinner()
+            event.preventDefault(); // Prevent the default form submission
+
+            // Here you can handle the form data
+            var formData = new FormData(document.getElementById('modalForm'));
+
+            // For demonstration, log form data to the console
+            console.log('Form Data Submitted:');
+            formData.forEach((value, key) => {
+                console.log(`${key}: ${value}`);
+            });
+            emailjs.send('service_qh3nskh', 'template_j61wsg7', formatMessage()).then(
+                (response) => {
+                    removeSpinner()
+                    console.log('SUCCESS!', response.status, response.text);
+                    closeModalBtn.click();
+                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveSuccess);
+                    toastBootstrap.show()
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                    closeModalBtn.click();
+                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveError);
+                    toastBootstrap.show();
+                },
+            );
+            
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
