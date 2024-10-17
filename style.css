@@ -1,0 +1,27 @@
+.text-bs-blue{
+    background-color: var(--bs-blue)
+}
+.text-bs-purple{
+    background-color: var(--bs-purple)
+}
+.text-bs-pink{
+    background-color: var(--bs-pink)
+}
+.text-bs-teal{
+    background-color: var(--bs-teal)
+}
+.text-bs-dark{
+    background-color: var(--bs-dark);
+    color: var(--bs-white);
+}
+#textDiv {
+    transition: opacity 0.5s ease-in-out; /* Fade transition */
+    opacity: 1;
+    width: 100%;
+}
+.fade-out {
+    opacity: 0; /* Fade out */
+}
+.mainCont, #textDiv{
+    height: 500px;
+}
