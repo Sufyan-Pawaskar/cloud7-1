@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 .text-bs-yellow{
-    background-color: var(--bs-yellow)
+    background-color: #eee75c;
 }
 .text-bs-purple{
     background-color: var(--bs-orange)
 }
 .text-bs-pink{
-    background-color: var(--bs-pink)
+    background-color:  #f1958b;
 }
 .text-bs-teal{
-    background-color: var(--bs-teal)
+    background-color: #7ce7ca;
 }
 .text-bs-dark{
     background-color: var(--bs-dark);
@@ -20,6 +21,9 @@
     background-color: var(--bs-yellow); /* Change color as needed */
     /* padding: 0.1em; Optional: Adds spacing around the text */
     border-radius: 3px; /* Optional: Rounds the corners */
+}
+.w-35{
+    width: 30%;
 }
 #textDiv {
     transition: opacity 0.5s ease-in-out; /* Fade transition */
@@ -34,14 +38,14 @@
     padding-right: 0px !important;
 }
 #textHolder{
-    font-size: 7vw;
+    font-size: clamp(60px, 10vw, 150px);
     /* font-weight: bolder; */
     width: 100%;
     text-align: center;
     border-top:1px solid black;
     border-bottom:1px solid black;
-    line-height: 1;
-    font-family: "Bungee Shade", sans-serif;
+    line-height: 0.788;
+    font-family: Impact, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -49,14 +53,20 @@
     font-size: 5vw;
     /* font-weight: bolder; */
     width: 100%;
-    font-family: "Bungee Shade", sans-serif;
+    font-family: Anton, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 .smallText{
-     font-size: 20px;
-     font-family: 'Hahmlet';
-     font-weight: 900;
+     font-size: clamp(16px, 16px, 22px);
+     font-family: 'Libre Baskerville';
+     font-weight: 400;
+}
+#smallText{
+    margin-right: clamp(100px,0px,10px);
+}
+.text-end{
+    margin-left: 80px;
 }
 .fade-out {
     opacity: 0; /* Fade out */
@@ -73,10 +83,11 @@
     transform: scale(4);
 }
 .contactUs{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: underline;
+    font-family: 'Libre Baskerville', Courier, monospace;
+    font-weight: 400;
+    font-size: clamp(10px, 16px, 22px);
+    /* text-decoration: underline; */
+    margin-right: 5px;
 }
 .bi-arrow-right:hover {
     transform: scale(6.5); /* Adjust scale value as needed */
@@ -86,16 +97,16 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-family: 'Courier New', Courier;
-    font-weight: 600;
+    font-family: 'Libre Baskerville', Courier;
+    font-weight: 400;
 }
 .aboutUsflex{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Courier New', Courier;
-    font-weight: 600;
+    font-family: 'Libre Baskerville', Courier;
+    font-weight: 400;
 }
 .aboutUsSection{
     display: flex;
@@ -211,4 +222,9 @@ select {
 }
 .camera-models, .lens-models, .mic-models{
     display: none;
+}
+.hoverEffectContact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }

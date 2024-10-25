@@ -1,12 +1,19 @@
 const textDiv = document.getElementById('textDiv');
 const textHolder = document.getElementById('textHolder');
+const sText = document.getElementById('smallText');
+const homeLogo = document.getElementById('navLogo');
+const homeTab = document.getElementById('home-tab');
 const messages = [
-    { className: 'text-bs-yellow', text: 'IMAGINATION' },
-    { className: 'text-bs-purple', text: 'CREATIVITY' },
-    { className: 'text-bs-pink', text: 'CURIOSITY' },
-    { className: 'text-bs-teal', text: 'OUTREACH' }
+    { className: 'text-bs-pink', text: 'RESULTS', smallText:'We Show' },
+    { className: 'text-bs-teal', text: 'PLANNING', smallText:'We Do'},
+    { className: 'text-bs-yellow', text: 'STRATEGY',smallText:'We Have' }
 ];
-
+function goHome(){
+    homeLogo.addEventListener('click',(event) => {
+        console.log(event)
+        homeTab.click();
+    })
+}
 let index = 0;
 
 setInterval(() => {
@@ -18,6 +25,7 @@ setInterval(() => {
         // Change class and text
         textDiv.className = 'z-0 '+messages[index].className + ' p-3'; // Preserve padding  d-flex column align-items-center justify-content-center
         textHolder.textContent = messages[index].text;
+        sText.textContent = messages[index].smallText;
 
         // Start fade in
         textDiv.classList.remove('fade-out');
@@ -107,6 +115,7 @@ function dateValidate () {
     });
 }
 document.addEventListener("DOMContentLoaded", function(){
+    goHome();
     attachEvents();
     dateValidate();
 })
