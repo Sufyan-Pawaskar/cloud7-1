@@ -26,6 +26,11 @@ setInterval(() => {
         textDiv.className = 'z-0 '+messages[index].className + ' p-3'; // Preserve padding  d-flex column align-items-center justify-content-center
         textHolder.textContent = messages[index].text;
         sText.textContent = messages[index].smallText;
+        if (messages[index].smallText === "We Show"){
+            sText.classList.add('mar-right');
+        } else{
+            sText.classList.remove('mar-right');
+        }
 
         // Start fade in
         textDiv.classList.remove('fade-out');
