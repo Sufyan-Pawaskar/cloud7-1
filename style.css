@@ -38,7 +38,7 @@
     padding-right: 0px !important;
 }
 #textHolder{
-    font-size: clamp(60px, 10vw, 150px);
+    font-size: clamp(60px, 60px, 150px);
     /* font-weight: bolder; */
     width: 100%;
     text-align: center;
